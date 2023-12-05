@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.*;
 public class ManagementController {
 
     @GetMapping
-    public String get() {
-        return "GET:: management controller";
-    }
+    public String get() {return "GET:: management controller";}
 
     @PostMapping
     public String post() {
