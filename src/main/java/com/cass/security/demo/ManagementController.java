@@ -1,13 +1,17 @@
 package com.cass.security.demo;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/management")
+@Tag(name = "Management")
 public class ManagementController {
 
     @GetMapping
-    public String get() {return "GET:: management controller";}
+    public String get() {
+        return "GET:: management controller";
+    }
 
     @PostMapping
     public String post() {

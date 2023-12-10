@@ -1,11 +1,13 @@
 package com.cass.security.demo;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @PreAuthorize("hasRole('ADMIN')")
 @RequestMapping("/api/v1/admin")
+@Tag(name = "Admin")
 public class AdminController {
 
     @GetMapping
